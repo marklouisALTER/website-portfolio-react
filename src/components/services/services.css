@@ -44,7 +44,9 @@
 /** =========== Media Query (Small Devices ===================*/
 
 @media screen and (max-width: 600px) {
-
+    #services{
+        margin: 0;
+    }
     .tools__card{
         grid-template-columns: 1fr 1fr;
     }
