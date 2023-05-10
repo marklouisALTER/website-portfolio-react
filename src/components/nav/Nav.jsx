@@ -5,16 +5,42 @@ import {FaUserAlt} from 'react-icons/fa'
 import {BsBookHalf} from 'react-icons/bs'
 import {IoMdCreate} from 'react-icons/io'
 
+import icon from '../../assets/favicon.png'
+import { useState, useEffect } from 'react';
 
-import {useState} from 'react'
 
+// const Nav = () => {
+//   const [activeNav, setActiveNav] = useState ('#')
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState ('#')
-  return (
+  const [activeNav, setActiveNav] = useState('#');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      let active = '';
+
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          active = `#${section.id}`;
+        }
+      });
+
+      setActiveNav(active);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+
+
+
+return (
     <nav>
       <div className='logo'>
-      <h3>Markme</h3>
+      <img src={icon} alt=''/>
       </div>
       <div className='links'>
       <a href="#" onClick={()=> setActiveNav('#')} className={activeNav === '#'? 'active' : ''}><AiFillHome/></a>
