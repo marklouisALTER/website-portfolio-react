@@ -1,0 +1,59 @@
+#services{
+    padding-top: 5rem;
+}
+.tools__card{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1rem;
+}
+
+.tool__about{
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.tool__about:hover{
+    background: var(--color-bg-hover);
+    border: 1px solid var(--color-primary);
+}
+
+.tool__about small{
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+.tool__about .tool_icons{
+    font-size: 1.9rem;
+}
+
+/*================ MEDIA QUERIES (Meduim Devices)=============================*/
+@media screen and (max-width: 1024px) {
+    .tools__card {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .tool__about{
+        justify-self: center;
+        width: 100%;
+    }
+}
+
+/** =========== Media Query (Small Devices ===================*/
+
+@media screen and (max-width: 600px) {
+
+    .tools__card{
+        grid-template-columns: 1fr 1fr;
+    }
+    .tool__about{
+        justify-self: center;
+        width: 100%;
+    }
+    .tool__about > h3{
+        font-size: 0.9rem;
+    }
+
+}
