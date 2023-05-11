@@ -28,6 +28,7 @@
 
 .tool__about .tool_icons{
     font-size: 1.9rem;
+    color: var(--color-primary);
 }
 
 /*================ MEDIA QUERIES (Meduim Devices)=============================*/

@@ -1,0 +1,90 @@
+.contact__container{
+    display: grid;
+    grid-template-columns: 50% 20%;
+    gap: 10%;
+    justify-content: center;
+}
+.socialmedia__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.sendme__container h2{
+    font-weight: 400;
+    color: var(--color-primary);
+}
+
+form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+form input[type="text"],
+input[type='email'],
+textarea {
+    background-color: transparent;
+    color: var(--color-light);
+    border: 1px solid var(--color-primary);
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+form button{
+    font-size: 1rem;
+}
+
+.socialme__card{
+    background: var(--color-bg-variant);
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    border-radius: 1rem;
+}
+
+.socialme__icons{
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.socialme__card small{
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+.socialme__card:hover{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+}
+
+/**============ Media query (Medium Devices) ============*/
+@media screen and (max-width: 1024px) {
+    .contact__container{
+        grid-template-columns: 40% 40%;
+    }
+    #contact{
+        margin-top: 24rem;
+
+    }
+    .socialme__card{
+        padding: 0.3rem;
+    }
+}
+/**============ Media query (Small Devices) ============*/
+@media screen and (max-width: 600px) {
+    .contact__container{
+        grid-template-columns: 1fr;
+
+    }
+    #contact{
+        margin-top: 20rem;
+    }
+    .socialme__card {
+        display: none;
+    }
+}

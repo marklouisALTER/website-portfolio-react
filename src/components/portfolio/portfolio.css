@@ -26,14 +26,36 @@
     gap: 1rem;
 }
 
+.bottom__section{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bottom__section .next-icon{
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.bottom__section .next-icon:hover{
+    color: var(--color-white);
+    background: var(--color-bg-hover);
+}
+
+
 /**============= Media Query (Medium Devices) =================**/
 @media screen and (max-width: 1024px) {
     #portfolio{
-        margin-top: 14rem;
+        margin-top: 10rem;
+        
     }
     .portfolio__container{
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+        
     }
 }
 

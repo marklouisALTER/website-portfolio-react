@@ -10,7 +10,7 @@ const Header = () => {
         <h5>Hello I'm</h5>
         <h1>Mark Louis Bernardo</h1>
         <h5 className="text-light">Aspiring Fullstack Developer</h5>
-        <CTA/>
+        <CTA/> {/** One import */}
         <HeaderSocial/>
         <div className='profile'>
           <img src={profile} alt="My Profile picture"/>

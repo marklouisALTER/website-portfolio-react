@@ -3,6 +3,7 @@ import './portfolio.css'
 import demo1 from '../../assets/demo1.png'
 import demo2 from '../../assets/demo2.PNG'
 import demo3 from '../../assets/demo3.PNG'
+import {FcNext} from 'react-icons/fc'
 const Portfolio = () => {
   return (
     <section id="portfolio">
@@ -38,6 +39,10 @@ const Portfolio = () => {
           <a href='https://marklouisalter.github.io/To-do-list-js/' className='btn btn-primary' target='__blank'>Demo</a>
           </div>
         </article>
+      </div>
+      <div className='bottom__section'>
+      <a href ='https://github.com/marklouisALTER' target='__blank'><h2>View all My projects</h2></a>
+      <FcNext className='next-icon'/>
       </div>
     </section>
   )
