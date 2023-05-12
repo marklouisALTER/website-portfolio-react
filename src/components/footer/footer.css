@@ -1,0 +1,39 @@
+.footer{
+    background: var(--color-primary);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.sections{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    color: var(--color-bg-variant);
+    margin-top: 1rem;
+}
+
+a{
+    color: var(--color-bg-variant);
+}
+
+.socialmedia{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .sections {
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .sections{
+        flex-wrap: wrap;
+    }
+}

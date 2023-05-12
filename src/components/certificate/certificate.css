@@ -1,0 +1,47 @@
+.certificate__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+    background: var(--color-bg-variant);
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+}
+
+.swiper__container{
+    width: 100%;
+}
+
+.title{
+    color: var(--color-primary);
+}
+
+.type__date{
+   display: flex;
+   justify-content: space-between; 
+}
+
+.type__date >p:nth-child(2){
+    color: var(--color-light);
+    font-style: italic;
+}
+
+.info__item > p{
+    margin-top: 5rem;
+    text-align: justify;
+}
+
+/*================ MEDIA QUERIES (Meduim Devices)=============================*/
+@media screen and (max-width: 1024px) {
+    .certificate__container{
+        grid-template-columns: 1fr;
+    }
+
+}
+@media screen and (max-width: 600px) {
+
+    #certificate{
+        margin-top: 20rem;
+    }
+
+}
