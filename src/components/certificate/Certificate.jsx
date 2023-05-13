@@ -59,6 +59,11 @@ const data = [
     <section id='certificate'>
         <h5>Here's All my Ecert</h5>
         <h2>Certificate</h2>
+        <div className='btn__certificate'>
+        <a href='#slide1'>Training Ecert</a>
+        |
+        <a href='#slide2'>Webinar Ecert</a>
+        </div>
         <div className='container certificate__container'>
         <Swiper className='swiper__container' 
         pagination={true} 
@@ -70,7 +75,6 @@ const data = [
             <SwiperSlide><img src={ecert3} alt='Intro to Packet Tracer'/></SwiperSlide>
             <SwiperSlide><img src={ecert4} alt='Network Essentials'/></SwiperSlide>
     </Swiper>
-
 
             <div className='info__container'>
                 <div id='slide1'>
@@ -95,6 +99,9 @@ const data = [
                     }
                     </div>  
             </div>
+            <div id='slide2'>
+                        <h1>Hello world</h1>
+                    </div>
             </div>
     </section>
   )
