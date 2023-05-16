@@ -6,7 +6,9 @@
     padding: 2rem;
     border-radius: 1rem;
     border: 1px solid transparent;
+
 }
+
 
 #certificate .btn__certificate{
     margin-bottom: 1rem;
@@ -25,15 +27,18 @@
     border-bottom: 1px solid var(--color-primary);
 }
 
-.btn__certificate a:active{
+.btn__certificate a .active{
     color: var(--color-primary);
+    border : 1px solid black;
 }
 
-.swiper__container{
+.swiper__container,
+.swiper__container2{
     width: 100%;
 }
 
-.swiper__container img {
+.swiper__container,
+.swiper__container2 img {
     border-radius: 1rem;
 }
 
@@ -75,6 +80,16 @@
 
     .btn__certificate a{
         font-size: 1rem;
+    }
+    .title{
+        font-size: 0.9rem;
     } 
 
+    .type__date{
+        font-size: 0.8rem;
+    }
+
+    .info__item > p{
+        font-size: 0.8rem;
+    }
 }

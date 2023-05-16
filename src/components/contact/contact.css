@@ -77,12 +77,13 @@ form button{
 }
 /**============ Media query (Small Devices) ============*/
 @media screen and (max-width: 600px) {
+
     .contact__container{
         grid-template-columns: 1fr;
 
     }
     #contact{
-        margin-top: 20rem;
+        margin-top: 35rem;
     }
     .socialme__card {
         display: none;

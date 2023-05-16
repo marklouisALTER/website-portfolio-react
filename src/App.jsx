@@ -8,20 +8,38 @@ import Certificate from './components/certificate/Certificate';
 import Portfolio from './components/portfolio/Portfolio';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
-const app = () => {
+import Loader from './components/loader/Loader';
+
+import { useState, useEffect } from 'react';
+const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulating an asynchronous operation
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
+
   return (
-   <>
-         <Nav/>
-      <Header/>
-      <About/>
-      <Experience/>
-      <Services/>
-      <Certificate/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
-   </>
+    <>
+    {isLoading ? (
+      <Loader />
+    ) : (
+      <>
+        <Nav />
+        <Header />
+        <About />
+        <Experience />
+        <Services />
+        <Certificate />
+        <Portfolio />
+        <Contact />
+        <Footer />
+      </>
+    )}
+  </>
   )
 }
 
-export default app;
+export default App;

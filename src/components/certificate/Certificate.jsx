@@ -1,11 +1,15 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import './certificate.css'
+// import './script.js'
 import ecert1 from '../../assets/backend.PNG';
 import ecert2 from '../../assets/javascript.PNG';
 import ecert3 from '../../assets/network-essentials.PNG';
 import ecert4 from '../../assets/intro-packet.PNG';
-
+import webinar1 from '../../assets/amason.png';
+import webinar2 from '../../assets/cyber.PNG';
+import webinar3 from '../../assets/psgame.PNG';
+import webinar4 from '../../assets/ust.PNG';
 // Import Swiper React components
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -18,10 +22,46 @@ import  SwiperCore, { Pagination } from "swiper";
 
 const Certificate = () => {
     const [currentSlide, setCurrentSlide] = useState(1);
-
+    const [ActiveLink, setActiveLink] = useState('#');
     const handleSlideChange = (swiper) => {
       setCurrentSlide(swiper.activeIndex);
     };
+    
+
+useEffect(()=>{
+    const trainingEcert = document.querySelector('#training__ecert');
+    const webinarEcert = document.querySelector('#webinar__ecert');
+    const slide1 = document.querySelector('#slide1');
+    const slide2 = document.querySelector('#slide2');
+    const swipper1 = document.querySelector('.swiper__container');
+    const swipper2 = document.querySelector('.swiper__container2');
+    const infoContainer = document.querySelector('.info__container');
+    swipper2.style.display = 'none';
+    slide2.style.display = 'none';
+        trainingEcert.addEventListener('click',function(){
+        trainingEcert.style.borderBottom = '1px solid var(--color-primary)'
+        webinarEcert.style.borderBottom = 'none'
+        slide2.style.display = 'none';
+        slide1.style.display = 'block';
+        swipper1.style.display = 'block';
+        swipper2.style.display = 'none';
+        infoContainer.style.display = 'block';
+    })
+    webinarEcert.addEventListener('click',function(){
+        webinarEcert.style.borderBottom = '1px solid var(--color-primary)'
+        trainingEcert.style.borderBottom = 'none'
+        slide2.style.display = 'block';
+        slide1.style.display = 'none';
+        swipper1.style.display = 'none';
+        swipper2.style.display = 'block';
+        infoContainer.style.display = 'none';
+
+    })
+    
+    
+    
+    }, []);
+
 
 const data = [
     {
@@ -53,6 +93,35 @@ const data = [
     }
 ]
 
+const webinar = [
+    {
+        title: 'Amazon AWS Webinar',
+        type: 'Webinar',
+        date: 'September 29, 2022',
+        content: 'This webinar is all about on how to use the aws amazon Conference day. Tutorials and modules that you need to watch and attend to get this certificate. Also free 25$ account.'
+    },
+    {
+        title: 'Cyber Security Fundamentals',
+        type: 'Webinar',
+        date: 'September 04, 2021',
+        content: 'This webinar is about awareness in types of viruses and how to avoid this. And learn how to defend your privacy about types of attacks happening in internet.'
+    },
+
+    {
+        title: 'Survive on Information Technology',
+        type: 'Webinar',
+        date: 'October 30, 2021',
+        content: 'In this webinar tackle about how to survive in IT course and giving tips. And teach us what we need in order to graduate and become competent programmers.'
+    },
+
+    {
+        title: 'Real World XP',
+        type: 'Webinar',
+        date: 'April 02, 2022',
+        content: 'In this webinar is all about how to develop your skillset and build your career in technology. Same as in the Survive on Information Technology to overcome the obstacle in IT.'
+    }
+]
+
   return (
 
 
@@ -60,9 +129,9 @@ const data = [
         <h5>Here's All my Ecert</h5>
         <h2>Certificate</h2>
         <div className='btn__certificate'>
-        <a href='#slide1'>Training Ecert</a>
+        <a href='#certificate' id='training__ecert' onClick={()=> setActiveLink('active')} className={ActiveLink === 'active'? 'active': ''}>Training Ecert</a>
         |
-        <a href='#slide2'>Webinar Ecert</a>
+        <a href='#certificate' id='webinar__ecert'>Webinar Ecert</a>
         </div>
         <div className='container certificate__container'>
         <Swiper className='swiper__container' 
@@ -76,7 +145,7 @@ const data = [
             <SwiperSlide><img src={ecert4} alt='Network Essentials'/></SwiperSlide>
     </Swiper>
 
-            <div className='info__container'>
+            <div className='info__container' >
                 <div id='slide1'>
                     {
                         
@@ -99,10 +168,39 @@ const data = [
                     }
                     </div>  
             </div>
+            <Swiper className='swiper__container2' 
+        pagination={true} 
+        modules={[Pagination]}
+        onSlideChange={handleSlideChange}
+        spaceBetween={40}>
+            <SwiperSlide><img src={webinar1} alt='Amason Webinar Certificate'/></SwiperSlide>
+            <SwiperSlide><img src={webinar2} alt='Cyber Security Certificate'/></SwiperSlide>
+            <SwiperSlide><img src={webinar3} alt='Survive on Technology'/></SwiperSlide>
+            <SwiperSlide><img src={webinar4} alt='Real World XP'/></SwiperSlide>
+    </Swiper>
+
             <div id='slide2'>
-                        <h1>Hello world</h1>
+            {
+                        
+                        webinar.map(({title,type,date,content}, index)=>{
+                            return(
+                            <div className='info__item' key={index}
+                                style={{display: currentSlide === index ? 'block':'none'}}
+                            >
+                                <div className='title'>
+                                <h3>{title}</h3>
+                                </div>
+                                <div className='type__date'>
+                                <p>{type}</p>
+                                <p>{date}</p>
+                                </div>
+                                <p>{content}</p>
+                            </div>
+                        )
+                        })
+                    }
                     </div>
-            </div>
+                    </div>
     </section>
   )
 }
