@@ -15,16 +15,16 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulating an asynchronous operation
+
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 5000);
   }, []);
 
   return (
     <>
     {isLoading ? (
-      <Loader />
+      <Loader/>
     ) : (
       <>
         <Nav />

@@ -3,13 +3,32 @@ import './Experience.css'
 import {AiFillHtml5} from 'react-icons/ai'
 import {DiCss3Full,DiReact,DiMongodb,DiNodejsSmall} from 'react-icons/di'
 import {SiJavascript,SiBootstrap,SiPhp,SiSqlite} from 'react-icons/si'
+import { useEffect } from 'react'
+
+
 const Experience = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+      console.log(entry)
+      if(entry.isIntersecting){
+          entry.target.classList.add('show');
+      }
+      else{
+          entry.target.classList.remove('show');
+      }
+      })
+  })
+  
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el)=> observer.observe(el)); 
+  })
   return (
     <section id="experience">
       <h5>What Skills I Have</h5>
       <h2>My Experience</h2>
       <div className="container experience__container">
-        <div className='experience__frontend'>
+        <div className='hidden experience__frontend'>
           <h3>Frontend Development</h3>
           <div className='experience__content'>
             <article className='experience__details'>
@@ -49,7 +68,7 @@ const Experience = () => {
             </article>
           </div>
         </div>
-        <div className='experience__backend'>
+        <div className='hidden experience__backend'>
         <h3>Frontend Development</h3>
         <div className='experience__content'>
             <article className='experience__details'>

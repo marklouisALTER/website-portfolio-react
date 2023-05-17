@@ -1,8 +1,44 @@
+#about{
+    padding-top: 5rem;
+}
 .about__container{
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
 }
+
+.hidden{
+    opacity: 0;
+    transition: 1s;
+    transform: translate(-40%);
+}
+
+.show{
+    opacity: 1;
+    transform: translate(0%);
+}
+
+.hidden:nth-child(1){
+    transition-delay: 200ms;
+}
+.hidden:nth-child(2){
+    transition-delay: 400ms;
+}
+.hidden:nth-child(3){
+    transition-delay: 600ms;
+}
+
+.hiddenTxt{
+    opacity: 0;
+    transition: 1s ease-in-out;
+    filter: blur(5px);
+}
+
+.showTxt{
+    opacity: 1;
+    filter: blur(0px);
+}
+
 
 .about__me{
     width: 86%;

@@ -21,7 +21,7 @@ import "swiper/css/pagination";
 import  SwiperCore, { Pagination } from "swiper";
 
 const Certificate = () => {
-    const [currentSlide, setCurrentSlide] = useState(1);
+    const [currentSlide, setCurrentSlide] = useState(0);
     const [ActiveLink, setActiveLink] = useState('#');
     const handleSlideChange = (swiper) => {
       setCurrentSlide(swiper.activeIndex);
