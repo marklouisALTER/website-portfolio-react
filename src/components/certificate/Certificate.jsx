@@ -10,6 +10,7 @@ import webinar1 from '../../assets/amason.png';
 import webinar2 from '../../assets/cyber.PNG';
 import webinar3 from '../../assets/psgame.PNG';
 import webinar4 from '../../assets/ust.PNG';
+import webinar5 from '../../assets/fwdp.PNG';
 // Import Swiper React components
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,7 +27,6 @@ const Certificate = () => {
     const handleSlideChange = (swiper) => {
       setCurrentSlide(swiper.activeIndex);
     };
-    
 
 useEffect(()=>{
     const trainingEcert = document.querySelector('#training__ecert');
@@ -119,6 +119,12 @@ const webinar = [
         type: 'Webinar',
         date: 'April 02, 2022',
         content: 'In this webinar is all about how to develop your skillset and build your career in technology. Same as in the Survive on Information Technology to overcome the obstacle in IT.'
+    },
+    {
+        title: 'AI in the Future',
+        type: 'Webinar',
+        date: 'June 25, 2023',
+        content: 'This is monthly Event in The Filipino Web Developer Peers its a community in Facebook that all filipino programmers meeting and sharing knowldge about Ai and discussions.'
     }
 ]
 
@@ -177,6 +183,7 @@ const webinar = [
             <SwiperSlide><img src={webinar2} alt='Cyber Security Certificate'/></SwiperSlide>
             <SwiperSlide><img src={webinar3} alt='Survive on Technology'/></SwiperSlide>
             <SwiperSlide><img src={webinar4} alt='Real World XP'/></SwiperSlide>
+            <SwiperSlide><img src={webinar5} alt='Future of AI'/></SwiperSlide>
     </Swiper>
 
             <div id='slide2'>
