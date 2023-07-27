@@ -1,6 +1,7 @@
 import React from 'react'
 import './Experience.css'
 import {AiFillHtml5} from 'react-icons/ai'
+import {SiMysql} from 'react-icons/si'
 import {DiCss3Full,DiReact,DiMongodb,DiNodejsSmall} from 'react-icons/di'
 import {SiJavascript,SiBootstrap,SiPhp,SiSqlite} from 'react-icons/si'
 import { useEffect } from 'react'
@@ -97,6 +98,13 @@ const Experience = () => {
             <div>
               <h4>Mysqlite</h4>
               <small className='text-light'>Experience</small>
+            </div>
+            </article>
+            <article className='experience__details'>
+            <SiMysql className='experience__details-icons'/>
+            <div>
+              <h4>Mysql</h4>
+              <small className='text-light'>Intermediate</small>
             </div>
             </article>
           </div>
