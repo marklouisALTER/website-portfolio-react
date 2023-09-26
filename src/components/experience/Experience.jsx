@@ -3,7 +3,7 @@ import './Experience.css'
 import {AiFillHtml5} from 'react-icons/ai'
 import {SiMysql} from 'react-icons/si'
 import {DiCss3Full,DiReact,DiMongodb,DiNodejsSmall} from 'react-icons/di'
-import {SiJavascript,SiBootstrap,SiPhp,SiSqlite} from 'react-icons/si'
+import {SiJavascript,SiBootstrap,SiPhp,SiSqlite,SiTailwindcss} from 'react-icons/si'
 import { useEffect } from 'react'
 
 
@@ -64,7 +64,14 @@ const Experience = () => {
             <DiReact className='experience__details-icons'/>
             <div>
               <h4>React</h4>
-              <small className='text-light'>Basic</small>
+              <small className='text-light'>Intermediate</small>
+            </div>
+            </article>
+            <article className='experience__details'>
+            <SiTailwindcss className='experience__details-icons'/>
+            <div>
+              <h4>Tailwind</h4>
+              <small className='text-light'>Intermediate</small>
             </div>
             </article>
           </div>
