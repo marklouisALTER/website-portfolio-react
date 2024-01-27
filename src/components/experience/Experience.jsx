@@ -4,8 +4,7 @@ import {AiFillHtml5} from 'react-icons/ai'
 import {SiMysql} from 'react-icons/si'
 import {DiCss3Full,DiReact,DiMongodb,DiNodejsSmall} from 'react-icons/di'
 import {SiJavascript,SiBootstrap,SiPhp,SiSqlite,SiTailwindcss} from 'react-icons/si'
-import { BiLogoTypescript } from "react-icons/bi";
-
+import { SiTypescript } from "react-icons/si";
 
 const Experience = () => {
   useEffect(() => {
@@ -75,7 +74,7 @@ const Experience = () => {
             </div>
             </article>
             <article className='experience__details'>
-            <BiLogoTypescript className='experience__details-icons'/>
+            <SiTypescript className='experience__details-icons'/>
             <div>
               <h4>TypeScript</h4>
               <small className='text-light'>Experience</small>
