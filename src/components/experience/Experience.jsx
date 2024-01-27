@@ -1,10 +1,10 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Experience.css'
 import {AiFillHtml5} from 'react-icons/ai'
 import {SiMysql} from 'react-icons/si'
 import {DiCss3Full,DiReact,DiMongodb,DiNodejsSmall} from 'react-icons/di'
 import {SiJavascript,SiBootstrap,SiPhp,SiSqlite,SiTailwindcss} from 'react-icons/si'
-import { useEffect } from 'react'
+import { BiLogoTypescript } from "react-icons/bi";
 
 
 const Experience = () => {
@@ -74,6 +74,13 @@ const Experience = () => {
               <small className='text-light'>Intermediate</small>
             </div>
             </article>
+            <article className='experience__details'>
+            <BiLogoTypescript className='experience__details-icons'/>
+            <div>
+              <h4>TypeScript</h4>
+              <small className='text-light'>Experience</small>
+            </div>
+            </article>
           </div>
         </div>
         <div className='hidden experience__backend'>
@@ -83,14 +90,14 @@ const Experience = () => {
             <DiMongodb className='experience__details-icons'/>
             <div>
               <h4>MongoDB</h4>
-              <small className='text-light'>Experience</small>
+              <small className='text-light'>Beginner</small>
             </div>
             </article>
             <article className='experience__details'>
             <DiNodejsSmall className='experience__details-icons'/>
             <div>
               <h4>Nodejs</h4>
-              <small className='text-light'>Experience</small>
+              <small className='text-light'>Intermediate</small>
             </div>
             </article>
             <article className='experience__details'>
